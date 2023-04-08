@@ -9,4 +9,7 @@ import scrapy
 class ScrapyDataItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
+    movie_name=scrapy.Field()
+    movie_url=scrapy.Field()
+    
     pass
