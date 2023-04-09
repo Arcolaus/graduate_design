@@ -6,14 +6,12 @@
 
 # useful for handling different item types with a single interface
 
-import re
-
 import pandas as pd
 
 class ExportMovieDetail:
     def __init__(self) -> None:
-        head = pd.DataFrame(columns=['title', "rating","score_num", "comment_num",'weight','id',"url"])
-        head.to_csv('detail.csv')
+        head = pd.DataFrame(columns=['title', "rating","score_num", "comment_num",'ratio','id'])
+        head.to_csv('detail.csv',)
 
     def open_spider(self, spider):
         pass
@@ -23,18 +21,14 @@ class ExportMovieDetail:
         rating=item.get("rating","")
         score_num=item.get("score_num","")
         comment_num=item.get("comment_num","")
-        url = item.get("url", "[url]")
         id = item.get("id", "[id]")
 
-        regex=re.compile('[0-9]+')
+        comment_num=comment_num[2:-2]
+        ratio=round(float(comment_num)/float(score_num),3)
 
-        # comment_num=regex.findall(comment_num)[0]
+        df = pd.DataFrame([[title, rating,score_num,comment_num,ratio,id]])
 
-        # weight=round(float(comment_num)/float(score_num),3)
-        weight =0
-        df = pd.DataFrame([[title, rating,score_num,comment_num,weight,id,url]])
-
-        df.to_csv("detail.csv", header=False, mode="a",encoding="gbk")
+        df.to_csv("detail.csv", header=False, mode="a")
         
         return item
 
@@ -42,13 +36,14 @@ class ExportMovieList:
     def __init__(self) -> None:
         head=pd.DataFrame(columns=['title',"id",'url'])
         head.to_csv('movie_list.csv')
-    
+
     def process_item(self,item,spider):
+
         title=item.get("title","[title]")
         url=item.get("url","[url]")
         id=item.get("id","[id]")
 
         df=pd.DataFrame([[title,id,url]])
-        df.to_csv("movie_list.csv",header=False,mode="a",encoding="gbk")
+        df.to_csv("movie_list.csv",header=False,mode="a")
 
         return item

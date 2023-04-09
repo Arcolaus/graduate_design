@@ -17,7 +17,7 @@ class MovieDetail(scrapy.Item):
 	title = scrapy.Field()			# 片名
 	url=scrapy.Field()				# 详情页url
 	id=scrapy.Field()             	# 豆瓣电影唯一标识id
-	rating=scrapy.Field()    	# 得分
+	rating=scrapy.Field()    		# 得分
 	score_num=scrapy.Field()    	# 评分人数
 	comment_num=scrapy.Field()		# 短评数
 

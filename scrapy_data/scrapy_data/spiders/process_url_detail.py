@@ -11,7 +11,7 @@ class ProcessUrlDetailSpider(scrapy.Spider):
 	# start_urls = ["https://movie.douban.com/subject/1292213/"]
 
 	def start_requests(self):
-		self.movie_list=pd.read_csv(r'F:\graduate_design\scrapy_data\output.csv',encoding='gbk')
+		self.movie_list=pd.read_csv('movie_list.csv')
 
 		for page in self.movie_list.itertuples():
 
@@ -41,5 +41,5 @@ class ProcessUrlDetailSpider(scrapy.Spider):
 		detail_movie["rating"]=sel.css("#interest_sectl > div.rating_wrap.clearbox > div.rating_self.clearfix > strong::text").extract_first()
 		detail_movie["score_num"]=sel.css('#interest_sectl > div.rating_wrap.clearbox > div.rating_self.clearfix > div > div.rating_sum > a > span::text').extract_first()
 		detail_movie["comment_num"]=sel.css('#comments-section > div.mod-hd > h2 > span > a::text').extract_first()
-		
+
 		yield detail_movie
