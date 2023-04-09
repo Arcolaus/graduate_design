@@ -81,7 +81,8 @@ class ScrapyDataDownloaderMiddleware:
         # Called for each request that goes through the downloader
         # middleware.
 
-        # request.cookies=COOKIES_DICT
+        request.cookies=COOKIES_DICT
+        
         # Must either:
         # - return None: continue processing this request
         # - or return a Response object

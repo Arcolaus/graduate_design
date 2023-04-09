@@ -9,8 +9,12 @@ class GetMovieListSpider(scrapy.Spider):
     allowed_domains = ["movie.douban.com"]
     # start_urls = ["http://movie.douban.com/"]
 
+    custom_settings = {
+        'ITEM_PIPELINES': {'scrapy_data.pipelines.ExportMovieList': 200,},
+    }
+
     def start_requests(self):
-        for page in range(1):
+        for page in range(10):
             yield Request(
                 url=f'https://movie.douban.com/top250?start={page * 25}&filter='
             )

@@ -10,6 +10,10 @@ class ProcessUrlDetailSpider(scrapy.Spider):
 	allowed_domains = ["movie.douban.com"]
 	# start_urls = ["https://movie.douban.com/subject/1292213/"]
 
+	custom_settings={
+		'ITEM_PIPELINES': {'scrapy_data.pipelines.ExportMovieDetail': 300,},
+	}
+
 	def start_requests(self):
 		self.movie_list=pd.read_csv('movie_list.csv')
 
