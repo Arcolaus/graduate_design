@@ -14,7 +14,6 @@ class ExportMovieDetail:
     def __init__(self) -> None:
         head = pd.DataFrame(columns=['title', "rating","score_num", "comment_num",'weight','id',"url"])
         head.to_csv('detail.csv')
-        pass
 
     def open_spider(self, spider):
         pass
@@ -29,11 +28,27 @@ class ExportMovieDetail:
 
         regex=re.compile('[0-9]+')
 
-        comment_num=regex.findall(comment_num)[0]
+        # comment_num=regex.findall(comment_num)[0]
 
-        weight=round(float(comment_num)/float(score_num),3)
+        # weight=round(float(comment_num)/float(score_num),3)
+        weight =0
         df = pd.DataFrame([[title, rating,score_num,comment_num,weight,id,url]])
 
         df.to_csv("detail.csv", header=False, mode="a",encoding="gbk")
         
+        return item
+
+class ExportMovieList:
+    def __init__(self) -> None:
+        head=pd.DataFrame(columns=['title',"id",'url'])
+        head.to_csv('movie_list.csv')
+    
+    def process_item(self,item,spider):
+        title=item.get("title","[title]")
+        url=item.get("url","[url]")
+        id=item.get("id","[id]")
+
+        df=pd.DataFrame([[title,id,url]])
+        df.to_csv("movie_list.csv",header=False,mode="a",encoding="gbk")
+
         return item

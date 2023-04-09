@@ -11,7 +11,7 @@ class Movie(scrapy.Item):
 	# name = scrapy.Field()
 	title=scrapy.Field()
 	url=scrapy.Field()
-
+	id=scrapy.Field()
 
 class MovieDetail(scrapy.Item):
 	title = scrapy.Field()			# 片名

@@ -24,8 +24,7 @@ class ProcessUrlDetailSpider(scrapy.Spider):
 			yield Request(
 				url=getattr(page,"url"),
 				meta={
-						"movie_title":getattr(page,'title'),
-	  					"movie_url":getattr(page,"url")
+						"title":getattr(page,'title'),
 					},
 				callback=self.parse
 			)
@@ -35,7 +34,7 @@ class ProcessUrlDetailSpider(scrapy.Spider):
 
 		detail_movie=MovieDetail()
 
-		detail_movie['title']=response.meta["movie_title"]
+		detail_movie['title']=response.meta["title"]
 		detail_movie['url']=response.url
 		detail_movie['id']=response.url.split("/")[-2]
 

@@ -7,7 +7,7 @@ from scrapy import signals
 
 # useful for handling different item types with a single interface
 def get_cookies_dict():
-    cookies_str=""
+    cookies_str='ll="118324"; push_noty_num=0; push_doumail_num=0; __utmv=30149280.15728; _ga=GA1.2.1758259612.1673093337; gr_user_id=c22f60b8-976c-4e50-ba77-1927a203660f; bid=sXRWT7Wcd_Q; dbcl2="157285472:NybKM3+8xXE"; __utmz=30149280.1680787849.59.2.utmcsr=accounts.douban.com|utmccn=(referral)|utmcmd=referral|utmcct=/; _pk_id.100001.8cb4=278c63ff85fc6183.1675531249.; _pk_ref.100001.8cb4=["","",1680858303,"https://movie.douban.com/subject/34941536/comments"]; ck=Swge; __utma=30149280.1758259612.1673093337.1681015830.1681024649.67; __utmb=30149280.0.10.1681024649; __utmc=30149280'
     cookies_dict={}
     
     for item in cookies_str.split('; '):
@@ -15,6 +15,8 @@ def get_cookies_dict():
         cookies_dict[key]=value
     
     return cookies_dict
+
+COOKIES_DICT = get_cookies_dict()
 
 class ScrapyDataSpiderMiddleware:
     # Not all methods need to be defined. If a method is not defined,
@@ -79,6 +81,7 @@ class ScrapyDataDownloaderMiddleware:
         # Called for each request that goes through the downloader
         # middleware.
 
+        request.cookies=COOKIES_DICT
         # Must either:
         # - return None: continue processing this request
         # - or return a Response object
