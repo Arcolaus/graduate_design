@@ -6,7 +6,15 @@
 from scrapy import signals
 
 # useful for handling different item types with a single interface
-
+def get_cookies_dict():
+    cookies_str=""
+    cookies_dict={}
+    
+    for item in cookies_str.split('; '):
+        key,value=item.split('=',maxsplit=1)
+        cookies_dict[key]=value
+    
+    return cookies_dict
 
 class ScrapyDataSpiderMiddleware:
     # Not all methods need to be defined. If a method is not defined,
