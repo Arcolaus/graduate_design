@@ -47,3 +47,30 @@ class ExportMovieList:
         df.to_csv("movie_list.csv",header=False,mode="a")
 
         return item
+    
+class ExportComments:
+    def __init__(self) -> None:
+        pass
+
+    def open_spider(self,spider):
+        # head=pd.DataFrame(columns=["id","title","score","stars","content"])
+        # head.to_csv("contents.csv")
+        pass
+
+    def process_item(self,item,spider):
+
+        title=item.get("movie_title","[title]")
+        id=item.get("movie_id","[id]")
+        score=item.get("score","[score]")
+        stars=item.get("stars","[stars]")
+        content=item.get("content","[content]")
+
+        if len(score) == 16:
+            score=score[7:8]
+        else:
+            score="[NULL]"
+
+        df=pd.DataFrame([[id,title,score,stars,content]])
+        df.to_csv("contents.csv",header=False,mode="a")
+
+        return item

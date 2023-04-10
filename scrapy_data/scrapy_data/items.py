@@ -21,8 +21,10 @@ class MovieDetail(scrapy.Item):
 	score_num=scrapy.Field()    	# 评分人数
 	comment_num=scrapy.Field()		# 短评数
 
-class MovieComment(scrapy.Item):		
-	score=scrapy.Field()		# 给出的打分
-	starts=scrapy.Field()		# 获得的“有用”
+class MovieComment(scrapy.Item):
+	movie_title=scrapy.Field()	# 短评对应的片名		
 	movie_id=scrapy.Field()		# 对应的电影id
-	content=scrapy.Field()		# 短评内容（需要清洗，去除各种转义符
+	score=scrapy.Field()		# 给出的打分
+	stars=scrapy.Field()		# 获得的“有用”
+	content=scrapy.Field()		# 短评内容（需要清洗，去除各种转义符）
+	

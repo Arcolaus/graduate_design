@@ -17,7 +17,7 @@ NEWSPIDER_MODULE = "scrapy_data.spiders"
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.78"
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 # CONCURRENT_REQUESTS = 1
@@ -67,6 +67,7 @@ DOWNLOADER_MIDDLEWARES = {
 ITEM_PIPELINES = {
    # "scrapy_data.pipelines.ExportMovieList": 200,
    # "scrapy_data.pipelines.ExportMovieDetail": 300,
+   # "scrapy_data.pipelines.ExportComments": 400,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

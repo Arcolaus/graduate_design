@@ -6,7 +6,7 @@ from scrapy_data.items import Movie
 
 class GetMovieListSpider(scrapy.Spider):
     name = "get_movie_list"
-    allowed_domains = ["movie.douban.com"]
+    allowed_domains = ["movie.douban.com","douban.com"]
     # start_urls = ["http://movie.douban.com/"]
 
     custom_settings = {
@@ -14,7 +14,7 @@ class GetMovieListSpider(scrapy.Spider):
     }
 
     def start_requests(self):
-        for page in range(10):
+        for page in range(1):
             yield Request(
                 url=f'https://movie.douban.com/top250?start={page * 25}&filter='
             )
