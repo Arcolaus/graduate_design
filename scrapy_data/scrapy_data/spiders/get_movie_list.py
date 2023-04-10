@@ -14,7 +14,7 @@ class GetMovieListSpider(scrapy.Spider):
     }
 
     def start_requests(self):
-        for page in range(1):
+        for page in range(10):
             yield Request(
                 url=f'https://movie.douban.com/top250?start={page * 25}&filter='
             )
