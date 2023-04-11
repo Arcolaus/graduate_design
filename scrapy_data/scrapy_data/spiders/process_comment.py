@@ -11,7 +11,12 @@ class ProcessCommentSpider(scrapy.Spider):
     # start_urls = ["https://movie.douban.com/subject/27010768/comments?start=0&limit=20&status=P"]
 
     custom_settings={
-		# 'ITEM_PIPELINES': {"scrapy_data.pipelines.ExportComments": 500,},
+		'ITEM_PIPELINES': {
+            "scrapy_data.pipelines.ExportComments": 500,
+        },
+        "DOWNLOADER_MIDDLEWARES":{
+            "scrapy_data.middlewares.ScrapyDataDownloaderMiddleware": 300,
+        }
 	}
 
     def start_requests(self):
@@ -22,7 +27,7 @@ class ProcessCommentSpider(scrapy.Spider):
             movie_title=getattr(page,"title")
             movie_id=getattr(page,"id")
 
-            for it in range(11,12):
+            for it in range(1,28):
                 yield Request(url=(movie_url+f"comments?start={it * 20}&limit=20&status=P"),
                               meta={
                                 "title":movie_title,

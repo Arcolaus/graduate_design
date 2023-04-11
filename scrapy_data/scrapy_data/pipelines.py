@@ -74,3 +74,22 @@ class ExportComments:
         df.to_csv("contents.csv",header=False,mode="a")
 
         return item
+    
+class ExportProxy:
+    def __init__(self) -> None:
+        pass
+
+    def open_spider(self,spider):
+        head=pd.DataFrame(columns=["ip","port","proxy_url"])
+        head.to_csv("proxy_list.csv")
+    
+    def process_item(self,item,spider):
+        re=r"http://((2(5[0-5]|[0-4]\d))|[0-1]?\d{1,2})(\.((2(5[0-5]|[0-4]\d))|[0-1]?\d{1,2})){3}:[0-9]+"
+        ip=item.get("ip","[ip]")
+        port=item.get("port","[port]")
+        proxy_url=item.get("proxy_url","[proxy_url]")
+
+        df=pd.DataFrame([[ip,port,proxy_url]])
+        df.to_csv("proxy_list.csv",header=False,mode="a")
+
+        return item

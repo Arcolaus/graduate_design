@@ -27,4 +27,8 @@ class MovieComment(scrapy.Item):
 	score=scrapy.Field()		# 给出的打分
 	stars=scrapy.Field()		# 获得的“有用”
 	content=scrapy.Field()		# 短评内容（需要清洗，去除各种转义符）
-	
+
+class ProxyIP(scrapy.Item):
+	ip=scrapy.Field()
+	port=scrapy.Field()
+	proxy_url=scrapy.Field()

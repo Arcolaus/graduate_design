@@ -6,5 +6,14 @@ class HttpproxyipSpider(scrapy.Spider):
     allowed_domains = ["icanhazip.com"]
     start_urls = ["http://myip.ipip.net"]
 
+    custom_settings={
+		'ITEM_PIPELINES': {
+            },
+        "DOWNLOADER_MIDDLEWARES":{
+            "scrapy_data.middlewares.ScrapyDataDownloaderMiddleware": 300,
+        }
+	}
+
     def parse(self, response):
-        print('代理后的ip: ', response.text)
+        print('IP info :', response.text)
+        # print(response.status)
