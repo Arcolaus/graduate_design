@@ -18,7 +18,7 @@ signature="o0eiedvjs7ghnra26v6lxvmcb0"
 
 # useful for handling different item types with a single interface
 def get_cookies_dict():
-    cookies_str='ll="118324"; push_noty_num=0; push_doumail_num=0; __utmv=30149280.15728; _ga=GA1.2.1758259612.1673093337; gr_user_id=c22f60b8-976c-4e50-ba77-1927a203660f; bid=sXRWT7Wcd_Q; __utmz=30149280.1680787849.59.2.utmcsr=accounts.douban.com|utmccn=(referral)|utmcmd=referral|utmcct=/; ct=y; __utmc=30149280; frodotk_db="f32ac707aaca13eed9805517005e3bca"; ap_v=0,6.0; __utma=30149280.1758259612.1673093337.1681189279.1681198645.75; dbcl2="157285472:gmxq8naf6Gs"; ck=hTYR; _pk_ref.100001.8cb4=["","",1681203174,"https://movie.douban.com/subject/34941536/?from=showing"]; _pk_id.100001.8cb4=278c63ff85fc6183.1675531249.1.1681203174.undefined.; _pk_ses.100001.8cb4=*; __utmt=1; __utmb=30149280.2.10.1681198645'
+    cookies_str='ll="118324"; push_noty_num=0; push_doumail_num=0; __utmv=30149280.15728; _ga=GA1.2.1758259612.1673093337; gr_user_id=c22f60b8-976c-4e50-ba77-1927a203660f; bid=sXRWT7Wcd_Q; __utmz=30149280.1680787849.59.2.utmcsr=accounts.douban.com|utmccn=(referral)|utmcmd=referral|utmcct=/; ct=y; dbcl2="157285472:gmxq8naf6Gs"; ck=hTYR; __utmc=30149280; _pk_ref.100001.8cb4=["","",1681270786,"https://movie.douban.com/subject/27010768/comments?status=P"]; _pk_id.100001.8cb4=278c63ff85fc6183.1675531249.; frodotk_db="f0f0ce00272e53b8d2d26a00758afb28"; ap_v=0,6.0; __utma=30149280.1758259612.1673093337.1681292379.1681307192.80; __utmb=30149280.0.10.1681307192'
     cookies_dict={}
     
     for item in cookies_str.split('; '):
@@ -106,23 +106,23 @@ class ScrapyDataDownloaderMiddleware:
         request.meta["User-Agent"]=ua
 
         # request.meta["proxy"] = self.get_proxy("API")
-        if not request.meta.get("proxy"):
-            request.meta["proxy"] = self.get_proxy("API")
+        # if not request.meta.get("proxy"):
+            # request.meta["proxy"] = self.get_proxy("API")
         
         return None
 
     def process_response(self, request, response, spider):
 
-        if response.status != 200:
-            print("response status error")
-            self.faild_times += 1
+        # if response.status != 200:
+        #     print("response status error")
+        #     self.faild_times += 1
 
-        if self.faild_times >= self.max_failed:
-            self.change_proxyIP()
-            print("Proxy IP changed")
-            self.faild_times = 0
-            del request.meta['proxy']
-            return request
+        # if self.faild_times >= self.max_failed:
+        #     self.change_proxyIP()
+        #     print("Proxy IP changed")
+        #     self.faild_times = 0
+        #     del request.meta['proxy']
+        #     return request
         
         return response
 
