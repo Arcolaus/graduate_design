@@ -73,6 +73,8 @@ class ExportComments:
         df=pd.DataFrame([[id,title,score,stars,content]])
         df.to_csv("contents.csv",header=False,mode="a")
 
+        # print("content: {}".format(content))
+
         return item
     
 class ExportProxy:

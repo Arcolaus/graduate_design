@@ -7,10 +7,19 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
+import datetime
+
+
 BOT_NAME = "scrapy_data"
 
 SPIDER_MODULES = ["scrapy_data.spiders"]
 NEWSPIDER_MODULE = "scrapy_data.spiders"
+
+
+# LOG_LEVEL = 'DEBUG'
+# to_day = datetime.datetime.now()
+# log_file_path = 'log/scrapy_{}_{}_{}.log'.format(to_day.year, to_day.month, to_day.day)
+# LOG_FILE = log_file_path
 
 
 
@@ -23,7 +32,7 @@ USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTM
 ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-# CONCURRENT_REQUESTS = 1
+CONCURRENT_REQUESTS = 8
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay

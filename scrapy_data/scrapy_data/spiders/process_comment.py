@@ -16,7 +16,7 @@ class ProcessCommentSpider(scrapy.Spider):
         },
         "DOWNLOADER_MIDDLEWARES":{
             "scrapy_data.middlewares.ScrapyDataDownloaderMiddleware": 300,
-        }
+        },
 	}
 
     def start_requests(self):
@@ -26,8 +26,8 @@ class ProcessCommentSpider(scrapy.Spider):
             movie_url=getattr(page,"url")
             movie_title=getattr(page,"title")
             movie_id=getattr(page,"id")
-
-            for it in range(1,28):
+            
+            for it in range(0,28):
                 yield Request(url=(movie_url+f"comments?start={it * 20}&limit=20&status=P"),
                               meta={
                                 "title":movie_title,
@@ -38,7 +38,7 @@ class ProcessCommentSpider(scrapy.Spider):
 
     def parse(self, response):
         sel=Selector(response)
-        print(response.text)
+
         comment_items=sel.css("#comments >  div.comment-item")
 
         for item in comment_items:

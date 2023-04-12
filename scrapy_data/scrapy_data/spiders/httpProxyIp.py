@@ -15,5 +15,5 @@ class HttpproxyipSpider(scrapy.Spider):
 	}
 
     def parse(self, response):
-        print('IP info :', response.text)
+        print(response.text)
         # print(response.status)
