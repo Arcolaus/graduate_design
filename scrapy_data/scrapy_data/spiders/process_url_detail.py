@@ -19,12 +19,6 @@ class ProcessUrlDetailSpider(scrapy.Spider):
 
 		for page in self.movie_list.itertuples():
 
-			# self.movie_title=getattr(page,'title')
-			# self.movie_url=getattr(page,"url")
-			# 以上获取单个item信息的方法只有在并发数为1的时候才可行
-			# 原因是，目测scrapy的大致工作原理中，start_request()函数和parse()函数是异步的
-			# 所以定义在类内的变量无法准确用于parse()函数的调用
-
 			yield Request(
 				url=getattr(page,"url"),
 				meta={

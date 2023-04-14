@@ -1,0 +1,950 @@
+2023-04-14 22:09:58 [scrapy.utils.log] INFO: Scrapy 2.8.0 started (bot: scrapy_data)
+2023-04-14 22:09:58 [scrapy.utils.log] INFO: Versions: lxml 4.9.2.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.7.0, w3lib 1.21.0, Twisted 22.10.0, Python 3.9.16 | packaged by conda-forge | (main, Feb  1 2023, 21:28:38) [MSC v.1929 64 bit (AMD64)], pyOpenSSL 23.1.1 (OpenSSL 3.1.0 14 Mar 2023), cryptography 40.0.1, Platform Windows-10-10.0.22621-SP0
+2023-04-14 22:09:58 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'scrapy_data',
+ 'CONCURRENT_REQUESTS': 8,
+ 'DOWNLOAD_DELAY': 3,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_ENABLED': False,
+ 'LOG_FILE': 'log/2023414_22_9_58.log',
+ 'NEWSPIDER_MODULE': 'scrapy_data.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'RETRY_TIMES': 1,
+ 'SPIDER_MODULES': ['scrapy_data.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 '
+               'Edg/112.0.1722.34'}
+2023-04-14 22:09:58 [asyncio] DEBUG: Using selector: SelectSelector
+2023-04-14 22:09:59 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2023-04-14 22:09:59 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.windows_events._WindowsSelectorEventLoop
+2023-04-14 22:09:59 [scrapy.extensions.telnet] INFO: Telnet Password: c67490c1bceca461
+2023-04-14 22:09:59 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2023-04-14 22:09:59 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy_data.middlewares.ScrapyDataDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-04-14 22:09:59 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-04-14 22:09:59 [scrapy.middleware] INFO: Enabled item pipelines:
+['scrapy_data.pipelines.ExportCeleWorksList']
+2023-04-14 22:09:59 [scrapy.core.engine] INFO: Spider opened
+2023-04-14 22:09:59 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-04-14 22:09:59 [celebrity_works] INFO: Spider opened: celebrity_works
+2023-04-14 22:09:59 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-04-14 22:10:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://movie.douban.com/celebrity/1354130/movies?start=0&format=text&sortby=time&role=A1> (referer: None)
+2023-04-14 22:10:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354130/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '35372742',
+ 'title': '无名',
+ 'url': 'https://movie.douban.com/subject/35372742/'}
+2023-04-14 22:10:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354130/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '36122241',
+ 'title': '湖南卫视2022-2023年跨年演唱会',
+ 'url': 'https://movie.douban.com/subject/36122241/'}
+2023-04-14 22:10:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354130/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '34908108',
+ 'title': '冰雨火',
+ 'url': 'https://movie.douban.com/subject/34908108/'}
+2023-04-14 22:10:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354130/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '33442334',
+ 'title': '风起洛阳',
+ 'url': 'https://movie.douban.com/subject/33442334/'}
+2023-04-14 22:10:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354130/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '35209733',
+ 'title': '理想照耀中国',
+ 'url': 'https://movie.douban.com/subject/35209733/'}
+2023-04-14 22:10:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354130/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '27069428',
+ 'title': '有翡',
+ 'url': 'https://movie.douban.com/subject/27069428/'}
+2023-04-14 22:10:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354130/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '35263095',
+ 'title': '花的游吟',
+ 'url': 'https://movie.douban.com/subject/35263095/'}
+2023-04-14 22:10:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354130/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '27591191',
+ 'title': '我的奇怪朋友',
+ 'url': 'https://movie.douban.com/subject/27591191/'}
+2023-04-14 22:10:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354130/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '34967834',
+ 'title': '天天云时间',
+ 'url': 'https://movie.douban.com/subject/34967834/'}
+2023-04-14 22:10:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://movie.douban.com/celebrity/1354130/movies?start=1&format=text&sortby=time&role=A1> (referer: None)
+2023-04-14 22:10:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354130/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '35372742',
+ 'title': '无名',
+ 'url': 'https://movie.douban.com/subject/35372742/'}
+2023-04-14 22:10:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354130/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '36122241',
+ 'title': '湖南卫视2022-2023年跨年演唱会',
+ 'url': 'https://movie.douban.com/subject/36122241/'}
+2023-04-14 22:10:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354130/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '34908108',
+ 'title': '冰雨火',
+ 'url': 'https://movie.douban.com/subject/34908108/'}
+2023-04-14 22:10:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354130/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '33442334',
+ 'title': '风起洛阳',
+ 'url': 'https://movie.douban.com/subject/33442334/'}
+2023-04-14 22:10:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354130/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '35209733',
+ 'title': '理想照耀中国',
+ 'url': 'https://movie.douban.com/subject/35209733/'}
+2023-04-14 22:10:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354130/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '27069428',
+ 'title': '有翡',
+ 'url': 'https://movie.douban.com/subject/27069428/'}
+2023-04-14 22:10:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354130/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '35263095',
+ 'title': '花的游吟',
+ 'url': 'https://movie.douban.com/subject/35263095/'}
+2023-04-14 22:10:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354130/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '27591191',
+ 'title': '我的奇怪朋友',
+ 'url': 'https://movie.douban.com/subject/27591191/'}
+2023-04-14 22:10:04 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354130/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '34967834',
+ 'title': '天天云时间',
+ 'url': 'https://movie.douban.com/subject/34967834/'}
+2023-04-14 22:10:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://movie.douban.com/celebrity/1360615/movies?start=0&format=text&sortby=time&role=A1> (referer: None)
+2023-04-14 22:10:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1360615/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '30403219',
+ 'title': '余生，请多指教',
+ 'url': 'https://movie.douban.com/subject/30403219/'}
+2023-04-14 22:10:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1360615/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '30313969',
+ 'title': '斗罗大陆',
+ 'url': 'https://movie.douban.com/subject/30313969/'}
+2023-04-14 22:10:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1360615/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '26743567',
+ 'title': '狼殿下',
+ 'url': 'https://movie.douban.com/subject/26743567/'}
+2023-04-14 22:10:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1360615/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '34906805',
+ 'title': '2019最美表演',
+ 'url': 'https://movie.douban.com/subject/34906805/'}
+2023-04-14 22:10:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1360615/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '25853071',
+ 'title': '庆余年 第一季',
+ 'url': 'https://movie.douban.com/subject/25853071/'}
+2023-04-14 22:10:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1360615/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '25779217',
+ 'title': '诛仙1',
+ 'url': 'https://movie.douban.com/subject/25779217/'}
+2023-04-14 22:10:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1360615/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '27155276',
+ 'title': '素人特工',
+ 'url': 'https://movie.douban.com/subject/27155276/'}
+2023-04-14 22:10:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1360615/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '27195020',
+ 'title': '陈情令',
+ 'url': 'https://movie.douban.com/subject/27195020/'}
+2023-04-14 22:10:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1360615/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '26882446',
+ 'title': '斗破苍穹',
+ 'url': 'https://movie.douban.com/subject/26882446/'}
+2023-04-14 22:10:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1360615/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '34807445',
+ 'title': '哦！我的皇帝陛下 第二季',
+ 'url': 'https://movie.douban.com/subject/34807445/'}
+2023-04-14 22:10:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1360615/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '27135558',
+ 'title': '哦！我的皇帝陛下 第一季',
+ 'url': 'https://movie.douban.com/subject/27135558/'}
+2023-04-14 22:10:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1360615/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '26575103',
+ 'title': '捉妖记2',
+ 'url': 'https://movie.douban.com/subject/26575103/'}
+2023-04-14 22:10:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1360615/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '26615597',
+ 'title': '相爱穿梭千年2：月光下的交换',
+ 'url': 'https://movie.douban.com/subject/26615597/'}
+2023-04-14 22:10:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1360615/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '26765418',
+ 'title': '超星星学园',
+ 'url': 'https://movie.douban.com/subject/26765418/'}
+2023-04-14 22:10:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://movie.douban.com/celebrity/1360615/movies?start=1&format=text&sortby=time&role=A1> (referer: None)
+2023-04-14 22:10:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1360615/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '30403219',
+ 'title': '余生，请多指教',
+ 'url': 'https://movie.douban.com/subject/30403219/'}
+2023-04-14 22:10:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1360615/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '30313969',
+ 'title': '斗罗大陆',
+ 'url': 'https://movie.douban.com/subject/30313969/'}
+2023-04-14 22:10:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1360615/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '26743567',
+ 'title': '狼殿下',
+ 'url': 'https://movie.douban.com/subject/26743567/'}
+2023-04-14 22:10:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1360615/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '34906805',
+ 'title': '2019最美表演',
+ 'url': 'https://movie.douban.com/subject/34906805/'}
+2023-04-14 22:10:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1360615/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '25853071',
+ 'title': '庆余年 第一季',
+ 'url': 'https://movie.douban.com/subject/25853071/'}
+2023-04-14 22:10:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1360615/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '25779217',
+ 'title': '诛仙1',
+ 'url': 'https://movie.douban.com/subject/25779217/'}
+2023-04-14 22:10:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1360615/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '27155276',
+ 'title': '素人特工',
+ 'url': 'https://movie.douban.com/subject/27155276/'}
+2023-04-14 22:10:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1360615/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '27195020',
+ 'title': '陈情令',
+ 'url': 'https://movie.douban.com/subject/27195020/'}
+2023-04-14 22:10:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1360615/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '26882446',
+ 'title': '斗破苍穹',
+ 'url': 'https://movie.douban.com/subject/26882446/'}
+2023-04-14 22:10:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1360615/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '34807445',
+ 'title': '哦！我的皇帝陛下 第二季',
+ 'url': 'https://movie.douban.com/subject/34807445/'}
+2023-04-14 22:10:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1360615/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '27135558',
+ 'title': '哦！我的皇帝陛下 第一季',
+ 'url': 'https://movie.douban.com/subject/27135558/'}
+2023-04-14 22:10:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1360615/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '26575103',
+ 'title': '捉妖记2',
+ 'url': 'https://movie.douban.com/subject/26575103/'}
+2023-04-14 22:10:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1360615/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '26615597',
+ 'title': '相爱穿梭千年2：月光下的交换',
+ 'url': 'https://movie.douban.com/subject/26615597/'}
+2023-04-14 22:10:11 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1360615/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '26765418',
+ 'title': '超星星学园',
+ 'url': 'https://movie.douban.com/subject/26765418/'}
+2023-04-14 22:10:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://movie.douban.com/celebrity/1354078/movies?start=0&format=text&sortby=time&role=A1> (referer: None)
+2023-04-14 22:10:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354078/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '35431984',
+ 'title': '两个人的小森林',
+ 'url': 'https://movie.douban.com/subject/35431984/'}
+2023-04-14 22:10:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354078/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '34779776',
+ 'title': '苍兰诀',
+ 'url': 'https://movie.douban.com/subject/34779776/'}
+2023-04-14 22:10:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354078/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '35058573',
+ 'title': '月光变奏曲',
+ 'url': 'https://movie.douban.com/subject/35058573/'}
+2023-04-14 22:10:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354078/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '26826330',
+ 'title': '刺杀小说家',
+ 'url': 'https://movie.douban.com/subject/26826330/'}
+2023-04-14 22:10:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354078/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '34951279',
+ 'title': '少爷与我的罗曼史',
+ 'url': 'https://movie.douban.com/subject/34951279/'}
+2023-04-14 22:10:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354078/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '34972208',
+ 'title': '少主且慢行 第二季',
+ 'url': 'https://movie.douban.com/subject/34972208/'}
+2023-04-14 22:10:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354078/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '34463312',
+ 'title': '少主且慢行 第一季',
+ 'url': 'https://movie.douban.com/subject/34463312/'}
+2023-04-14 22:10:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354078/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '30176770',
+ 'title': '下一站是幸福',
+ 'url': 'https://movie.douban.com/subject/30176770/'}
+2023-04-14 22:10:15 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354078/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '26826376',
+ 'title': '我的奇妙男友2之恋恋不忘',
+ 'url': 'https://movie.douban.com/subject/26826376/'}
+2023-04-14 22:10:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://movie.douban.com/celebrity/1354078/movies?start=1&format=text&sortby=time&role=A1> (referer: None)
+2023-04-14 22:10:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354078/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '35431984',
+ 'title': '两个人的小森林',
+ 'url': 'https://movie.douban.com/subject/35431984/'}
+2023-04-14 22:10:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354078/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '34779776',
+ 'title': '苍兰诀',
+ 'url': 'https://movie.douban.com/subject/34779776/'}
+2023-04-14 22:10:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354078/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '35058573',
+ 'title': '月光变奏曲',
+ 'url': 'https://movie.douban.com/subject/35058573/'}
+2023-04-14 22:10:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354078/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '26826330',
+ 'title': '刺杀小说家',
+ 'url': 'https://movie.douban.com/subject/26826330/'}
+2023-04-14 22:10:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354078/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '34951279',
+ 'title': '少爷与我的罗曼史',
+ 'url': 'https://movie.douban.com/subject/34951279/'}
+2023-04-14 22:10:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354078/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '34972208',
+ 'title': '少主且慢行 第二季',
+ 'url': 'https://movie.douban.com/subject/34972208/'}
+2023-04-14 22:10:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354078/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '34463312',
+ 'title': '少主且慢行 第一季',
+ 'url': 'https://movie.douban.com/subject/34463312/'}
+2023-04-14 22:10:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354078/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '30176770',
+ 'title': '下一站是幸福',
+ 'url': 'https://movie.douban.com/subject/30176770/'}
+2023-04-14 22:10:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354078/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '26826376',
+ 'title': '我的奇妙男友2之恋恋不忘',
+ 'url': 'https://movie.douban.com/subject/26826376/'}
+2023-04-14 22:10:19 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1354078/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '27005982',
+ 'title': '最亲爱的你',
+ 'url': 'https://movie.douban.com/subject/27005982/'}
+2023-04-14 22:10:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://movie.douban.com/celebrity/1314124/movies?start=0&format=text&sortby=time&role=A1> (referer: None)
+2023-04-14 22:10:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1314124/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '36122241',
+ 'title': '湖南卫视2022-2023年跨年演唱会',
+ 'url': 'https://movie.douban.com/subject/36122241/'}
+2023-04-14 22:10:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1314124/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '35029547',
+ 'title': '沉香如屑·沉香重华',
+ 'url': 'https://movie.douban.com/subject/35029547/'}
+2023-04-14 22:10:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1314124/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '30403219',
+ 'title': '余生，请多指教',
+ 'url': 'https://movie.douban.com/subject/30403219/'}
+2023-04-14 22:10:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1314124/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '30313647',
+ 'title': '女心理师',
+ 'url': 'https://movie.douban.com/subject/30313647/'}
+2023-04-14 22:10:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://movie.douban.com/celebrity/1314124/movies?start=1&format=text&sortby=time&role=A1> (referer: None)
+2023-04-14 22:10:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1314124/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '36122241',
+ 'title': '湖南卫视2022-2023年跨年演唱会',
+ 'url': 'https://movie.douban.com/subject/36122241/'}
+2023-04-14 22:10:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1314124/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '35029547',
+ 'title': '沉香如屑·沉香重华',
+ 'url': 'https://movie.douban.com/subject/35029547/'}
+2023-04-14 22:10:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1314124/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '30403219',
+ 'title': '余生，请多指教',
+ 'url': 'https://movie.douban.com/subject/30403219/'}
+2023-04-14 22:10:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1314124/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '30313647',
+ 'title': '女心理师',
+ 'url': 'https://movie.douban.com/subject/30313647/'}
+2023-04-14 22:10:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://movie.douban.com/celebrity/1383033/movies?start=0&format=text&sortby=time&role=A1> (referer: None)
+2023-04-14 22:10:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1383033/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '35152536',
+ 'title': '爱的二八定律',
+ 'url': 'https://movie.douban.com/subject/35152536/'}
+2023-04-14 22:10:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1383033/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '27073052',
+ 'title': '迷航昆仑墟',
+ 'url': 'https://movie.douban.com/subject/27073052/'}
+2023-04-14 22:10:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1383033/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '30463682',
+ 'title': '尚食',
+ 'url': 'https://movie.douban.com/subject/30463682/'}
+2023-04-14 22:10:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1383033/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '30148173',
+ 'title': '你微笑时很美',
+ 'url': 'https://movie.douban.com/subject/30148173/'}
+2023-04-14 22:10:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1383033/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '26811532',
+ 'title': '千古玦尘',
+ 'url': 'https://movie.douban.com/subject/26811532/'}
+2023-04-14 22:10:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1383033/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '35125443',
+ 'title': '1921',
+ 'url': 'https://movie.douban.com/subject/35125443/'}
+2023-04-14 22:10:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1383033/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '30400625',
+ 'title': '骊歌行',
+ 'url': 'https://movie.douban.com/subject/30400625/'}
+2023-04-14 22:10:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1383033/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '26926450',
+ 'title': '天舞纪',
+ 'url': 'https://movie.douban.com/subject/26926450/'}
+2023-04-14 22:10:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1383033/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '26877434',
+ 'title': '从前有座灵剑山',
+ 'url': 'https://movie.douban.com/subject/26877434/'}
+2023-04-14 22:10:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1383033/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '30157168',
+ 'title': '烈火军校',
+ 'url': 'https://movie.douban.com/subject/30157168/'}
+2023-04-14 22:10:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1383033/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '26971645',
+ 'title': '蓝色生死恋',
+ 'url': 'https://movie.douban.com/subject/26971645/'}
+2023-04-14 22:10:31 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1383033/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '27075195',
+ 'title': '招摇',
+ 'url': 'https://movie.douban.com/subject/27075195/'}
+2023-04-14 22:10:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://movie.douban.com/celebrity/1383033/movies?start=1&format=text&sortby=time&role=A1> (referer: None)
+2023-04-14 22:10:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1383033/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '35152536',
+ 'title': '爱的二八定律',
+ 'url': 'https://movie.douban.com/subject/35152536/'}
+2023-04-14 22:10:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1383033/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '27073052',
+ 'title': '迷航昆仑墟',
+ 'url': 'https://movie.douban.com/subject/27073052/'}
+2023-04-14 22:10:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1383033/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '30463682',
+ 'title': '尚食',
+ 'url': 'https://movie.douban.com/subject/30463682/'}
+2023-04-14 22:10:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1383033/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '30148173',
+ 'title': '你微笑时很美',
+ 'url': 'https://movie.douban.com/subject/30148173/'}
+2023-04-14 22:10:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1383033/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '26811532',
+ 'title': '千古玦尘',
+ 'url': 'https://movie.douban.com/subject/26811532/'}
+2023-04-14 22:10:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1383033/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '35125443',
+ 'title': '1921',
+ 'url': 'https://movie.douban.com/subject/35125443/'}
+2023-04-14 22:10:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1383033/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '30400625',
+ 'title': '骊歌行',
+ 'url': 'https://movie.douban.com/subject/30400625/'}
+2023-04-14 22:10:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1383033/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '26926450',
+ 'title': '天舞纪',
+ 'url': 'https://movie.douban.com/subject/26926450/'}
+2023-04-14 22:10:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1383033/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '26877434',
+ 'title': '从前有座灵剑山',
+ 'url': 'https://movie.douban.com/subject/26877434/'}
+2023-04-14 22:10:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1383033/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '30157168',
+ 'title': '烈火军校',
+ 'url': 'https://movie.douban.com/subject/30157168/'}
+2023-04-14 22:10:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1383033/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '26971645',
+ 'title': '蓝色生死恋',
+ 'url': 'https://movie.douban.com/subject/26971645/'}
+2023-04-14 22:10:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1383033/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '27075195',
+ 'title': '招摇',
+ 'url': 'https://movie.douban.com/subject/27075195/'}
+2023-04-14 22:10:35 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1383033/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '26999852',
+ 'title': '延禧攻略',
+ 'url': 'https://movie.douban.com/subject/26999852/'}
+2023-04-14 22:10:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://movie.douban.com/celebrity/1275620/movies?start=0&format=text&sortby=time&role=A1> (referer: None)
+2023-04-14 22:10:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1275620/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '35161592',
+ 'title': '风吹半夏',
+ 'url': 'https://movie.douban.com/subject/35161592/'}
+2023-04-14 22:10:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1275620/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '34951002',
+ 'title': '幸福到万家',
+ 'url': 'https://movie.douban.com/subject/34951002/'}
+2023-04-14 22:10:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1275620/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '35180907',
+ 'title': '谁是凶手',
+ 'url': 'https://movie.douban.com/subject/35180907/'}
+2023-04-14 22:10:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1275620/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '35209733',
+ 'title': '理想照耀中国',
+ 'url': 'https://movie.douban.com/subject/35209733/'}
+2023-04-14 22:10:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1275620/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '27069428',
+ 'title': '有翡',
+ 'url': 'https://movie.douban.com/subject/27069428/'}
+2023-04-14 22:10:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1275620/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '26928226',
+ 'title': '知否知否应是绿肥红瘦',
+ 'url': 'https://movie.douban.com/subject/26928226/'}
+2023-04-14 22:10:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1275620/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '26386688',
+ 'title': '你和我的倾城时光',
+ 'url': 'https://movie.douban.com/subject/26386688/'}
+2023-04-14 22:10:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1275620/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '30317275',
+ 'title': '忘忧酒馆3',
+ 'url': 'https://movie.douban.com/subject/30317275/'}
+2023-04-14 22:10:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1275620/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '25829175',
+ 'title': '西游记女儿国',
+ 'url': 'https://movie.douban.com/subject/25829175/'}
+2023-04-14 22:10:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://movie.douban.com/celebrity/1275620/movies?start=1&format=text&sortby=time&role=A1> (referer: None)
+2023-04-14 22:10:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1275620/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '35161592',
+ 'title': '风吹半夏',
+ 'url': 'https://movie.douban.com/subject/35161592/'}
+2023-04-14 22:10:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1275620/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '34951002',
+ 'title': '幸福到万家',
+ 'url': 'https://movie.douban.com/subject/34951002/'}
+2023-04-14 22:10:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1275620/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '35180907',
+ 'title': '谁是凶手',
+ 'url': 'https://movie.douban.com/subject/35180907/'}
+2023-04-14 22:10:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1275620/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '35209733',
+ 'title': '理想照耀中国',
+ 'url': 'https://movie.douban.com/subject/35209733/'}
+2023-04-14 22:10:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1275620/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '27069428',
+ 'title': '有翡',
+ 'url': 'https://movie.douban.com/subject/27069428/'}
+2023-04-14 22:10:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1275620/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '26928226',
+ 'title': '知否知否应是绿肥红瘦',
+ 'url': 'https://movie.douban.com/subject/26928226/'}
+2023-04-14 22:10:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1275620/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '26386688',
+ 'title': '你和我的倾城时光',
+ 'url': 'https://movie.douban.com/subject/26386688/'}
+2023-04-14 22:10:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1275620/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '30317275',
+ 'title': '忘忧酒馆3',
+ 'url': 'https://movie.douban.com/subject/30317275/'}
+2023-04-14 22:10:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1275620/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '25829175',
+ 'title': '西游记女儿国',
+ 'url': 'https://movie.douban.com/subject/25829175/'}
+2023-04-14 22:10:42 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1275620/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '27591954',
+ 'title': '2017最美表演',
+ 'url': 'https://movie.douban.com/subject/27591954/'}
+2023-04-14 22:10:48 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://movie.douban.com/celebrity/1052359/movies?start=0&format=text&sortby=time&role=A1> (referer: None)
+2023-04-14 22:10:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1052359/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '36122241',
+ 'title': '湖南卫视2022-2023年跨年演唱会',
+ 'url': 'https://movie.douban.com/subject/36122241/'}
+2023-04-14 22:10:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1052359/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '35152536',
+ 'title': '爱的二八定律',
+ 'url': 'https://movie.douban.com/subject/35152536/'}
+2023-04-14 22:10:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1052359/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '34454212',
+ 'title': '谢谢你医生',
+ 'url': 'https://movie.douban.com/subject/34454212/'}
+2023-04-14 22:10:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1052359/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '35753130',
+ 'title': '新年快递',
+ 'url': 'https://movie.douban.com/subject/35753130/'}
+2023-04-14 22:10:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1052359/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '26798457',
+ 'title': '斛珠夫人',
+ 'url': 'https://movie.douban.com/subject/26798457/'}
+2023-04-14 22:10:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1052359/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '30476726',
+ 'title': '暴风眼',
+ 'url': 'https://movie.douban.com/subject/30476726/'}
+2023-04-14 22:10:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1052359/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '26826330',
+ 'title': '刺杀小说家',
+ 'url': 'https://movie.douban.com/subject/26826330/'}
+2023-04-14 22:10:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1052359/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '35164015',
+ 'title': '听见她说',
+ 'url': 'https://movie.douban.com/subject/35164015/'}
+2023-04-14 22:10:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1052359/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '26915522',
+ 'title': '三生三世枕上书',
+ 'url': 'https://movie.douban.com/subject/26915522/'}
+2023-04-14 22:10:48 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1052359/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '30454698',
+ 'title': '解放·终局营救',
+ 'url': 'https://movie.douban.com/subject/30454698/'}
+2023-04-14 22:10:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://movie.douban.com/celebrity/1052359/movies?start=1&format=text&sortby=time&role=A1> (referer: None)
+2023-04-14 22:10:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1052359/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '36122241',
+ 'title': '湖南卫视2022-2023年跨年演唱会',
+ 'url': 'https://movie.douban.com/subject/36122241/'}
+2023-04-14 22:10:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1052359/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '35152536',
+ 'title': '爱的二八定律',
+ 'url': 'https://movie.douban.com/subject/35152536/'}
+2023-04-14 22:10:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1052359/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '34454212',
+ 'title': '谢谢你医生',
+ 'url': 'https://movie.douban.com/subject/34454212/'}
+2023-04-14 22:10:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1052359/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '35753130',
+ 'title': '新年快递',
+ 'url': 'https://movie.douban.com/subject/35753130/'}
+2023-04-14 22:10:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1052359/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '26798457',
+ 'title': '斛珠夫人',
+ 'url': 'https://movie.douban.com/subject/26798457/'}
+2023-04-14 22:10:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1052359/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '30476726',
+ 'title': '暴风眼',
+ 'url': 'https://movie.douban.com/subject/30476726/'}
+2023-04-14 22:10:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1052359/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '26826330',
+ 'title': '刺杀小说家',
+ 'url': 'https://movie.douban.com/subject/26826330/'}
+2023-04-14 22:10:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1052359/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '35164015',
+ 'title': '听见她说',
+ 'url': 'https://movie.douban.com/subject/35164015/'}
+2023-04-14 22:10:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1052359/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '26915522',
+ 'title': '三生三世枕上书',
+ 'url': 'https://movie.douban.com/subject/26915522/'}
+2023-04-14 22:10:51 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1052359/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '30454698',
+ 'title': '解放·终局营救',
+ 'url': 'https://movie.douban.com/subject/30454698/'}
+2023-04-14 22:10:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://movie.douban.com/celebrity/1385770/movies?start=0&format=text&sortby=time&role=A1> (referer: None)
+2023-04-14 22:10:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1385770/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '35274947',
+ 'title': '胡同',
+ 'url': 'https://movie.douban.com/subject/35274947/'}
+2023-04-14 22:10:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1385770/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '35452438',
+ 'title': '星汉灿烂·月升沧海',
+ 'url': 'https://movie.douban.com/subject/35452438/'}
+2023-04-14 22:10:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1385770/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '26339609',
+ 'title': '且试天下',
+ 'url': 'https://movie.douban.com/subject/26339609/'}
+2023-04-14 22:10:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1385770/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '35131244',
+ 'title': '国子监来了个女弟子',
+ 'url': 'https://movie.douban.com/subject/35131244/'}
+2023-04-14 22:10:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1385770/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '35125443',
+ 'title': '1921',
+ 'url': 'https://movie.douban.com/subject/35125443/'}
+2023-04-14 22:10:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1385770/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '35082299',
+ 'title': '一不小心捡到爱',
+ 'url': 'https://movie.douban.com/subject/35082299/'}
+2023-04-14 22:10:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1385770/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '26926445',
+ 'title': '长歌行',
+ 'url': 'https://movie.douban.com/subject/26926445/'}
+2023-04-14 22:10:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1385770/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '34908020',
+ 'title': '我，喜欢你',
+ 'url': 'https://movie.douban.com/subject/34908020/'}
+2023-04-14 22:10:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1385770/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '34463197',
+ 'title': '传闻中的陈芊芊',
+ 'url': 'https://movie.douban.com/subject/34463197/'}
+2023-04-14 22:10:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1385770/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '27611494',
+ 'title': '三千鸦杀',
+ 'url': 'https://movie.douban.com/subject/27611494/'}
+2023-04-14 22:10:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1385770/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '30258233',
+ 'title': '天雷一部之春花秋月',
+ 'url': 'https://movie.douban.com/subject/30258233/'}
+2023-04-14 22:10:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1385770/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '30156330',
+ 'title': '青囊传',
+ 'url': 'https://movie.douban.com/subject/30156330/'}
+2023-04-14 22:10:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1385770/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '26971645',
+ 'title': '蓝色生死恋',
+ 'url': 'https://movie.douban.com/subject/26971645/'}
+2023-04-14 22:10:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1385770/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '27663766',
+ 'title': '最动听的事',
+ 'url': 'https://movie.douban.com/subject/27663766/'}
+2023-04-14 22:10:54 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1385770/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '34807445',
+ 'title': '哦！我的皇帝陛下 第二季',
+ 'url': 'https://movie.douban.com/subject/34807445/'}
+2023-04-14 22:10:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://movie.douban.com/celebrity/1385770/movies?start=1&format=text&sortby=time&role=A1> (referer: None)
+2023-04-14 22:10:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1385770/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '35274947',
+ 'title': '胡同',
+ 'url': 'https://movie.douban.com/subject/35274947/'}
+2023-04-14 22:10:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1385770/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '35452438',
+ 'title': '星汉灿烂·月升沧海',
+ 'url': 'https://movie.douban.com/subject/35452438/'}
+2023-04-14 22:10:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1385770/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '26339609',
+ 'title': '且试天下',
+ 'url': 'https://movie.douban.com/subject/26339609/'}
+2023-04-14 22:10:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1385770/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '35131244',
+ 'title': '国子监来了个女弟子',
+ 'url': 'https://movie.douban.com/subject/35131244/'}
+2023-04-14 22:10:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1385770/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '35125443',
+ 'title': '1921',
+ 'url': 'https://movie.douban.com/subject/35125443/'}
+2023-04-14 22:10:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1385770/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '35082299',
+ 'title': '一不小心捡到爱',
+ 'url': 'https://movie.douban.com/subject/35082299/'}
+2023-04-14 22:10:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1385770/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '26926445',
+ 'title': '长歌行',
+ 'url': 'https://movie.douban.com/subject/26926445/'}
+2023-04-14 22:10:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1385770/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '34908020',
+ 'title': '我，喜欢你',
+ 'url': 'https://movie.douban.com/subject/34908020/'}
+2023-04-14 22:10:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1385770/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '34463197',
+ 'title': '传闻中的陈芊芊',
+ 'url': 'https://movie.douban.com/subject/34463197/'}
+2023-04-14 22:10:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1385770/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '27611494',
+ 'title': '三千鸦杀',
+ 'url': 'https://movie.douban.com/subject/27611494/'}
+2023-04-14 22:10:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1385770/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '30258233',
+ 'title': '天雷一部之春花秋月',
+ 'url': 'https://movie.douban.com/subject/30258233/'}
+2023-04-14 22:10:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1385770/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '30156330',
+ 'title': '青囊传',
+ 'url': 'https://movie.douban.com/subject/30156330/'}
+2023-04-14 22:10:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1385770/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '26971645',
+ 'title': '蓝色生死恋',
+ 'url': 'https://movie.douban.com/subject/26971645/'}
+2023-04-14 22:10:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1385770/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '27663766',
+ 'title': '最动听的事',
+ 'url': 'https://movie.douban.com/subject/27663766/'}
+2023-04-14 22:10:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1385770/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '34807445',
+ 'title': '哦！我的皇帝陛下 第二季',
+ 'url': 'https://movie.douban.com/subject/34807445/'}
+2023-04-14 22:10:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1385770/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '27135558',
+ 'title': '哦！我的皇帝陛下 第一季',
+ 'url': 'https://movie.douban.com/subject/27135558/'}
+2023-04-14 22:10:59 [scrapy.extensions.logstats] INFO: Crawled 16 pages (at 16 pages/min), scraped 168 items (at 168 items/min)
+2023-04-14 22:11:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://movie.douban.com/celebrity/1325127/movies?start=0&format=text&sortby=time&role=A1> (referer: None)
+2023-04-14 22:11:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1325127/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '35235410',
+ 'title': '与君初相识·恰似故人归',
+ 'url': 'https://movie.douban.com/subject/35235410/'}
+2023-04-14 22:11:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1325127/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '33454980',
+ 'title': '你是我的荣耀',
+ 'url': 'https://movie.douban.com/subject/33454980/'}
+2023-04-14 22:11:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1325127/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '26926445',
+ 'title': '长歌行',
+ 'url': 'https://movie.douban.com/subject/26926445/'}
+2023-04-14 22:11:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1325127/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '35348423',
+ 'title': '造相馆',
+ 'url': 'https://movie.douban.com/subject/35348423/'}
+2023-04-14 22:11:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1325127/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '27073044',
+ 'title': '幸福，触手可及！',
+ 'url': 'https://movie.douban.com/subject/27073044/'}
+2023-04-14 22:11:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1325127/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '26915522',
+ 'title': '三生三世枕上书',
+ 'url': 'https://movie.douban.com/subject/26915522/'}
+2023-04-14 22:11:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1325127/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '27088995',
+ 'title': '一千零一夜',
+ 'url': 'https://movie.douban.com/subject/27088995/'}
+2023-04-14 22:11:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1325127/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '26691361',
+ 'title': '21克拉',
+ 'url': 'https://movie.douban.com/subject/26691361/'}
+2023-04-14 22:11:01 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1325127/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '26703476',
+ 'title': '烈火如歌',
+ 'url': 'https://movie.douban.com/subject/26703476/'}
+2023-04-14 22:11:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://movie.douban.com/celebrity/1325127/movies?start=1&format=text&sortby=time&role=A1> (referer: None)
+2023-04-14 22:11:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1325127/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '35235410',
+ 'title': '与君初相识·恰似故人归',
+ 'url': 'https://movie.douban.com/subject/35235410/'}
+2023-04-14 22:11:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1325127/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '33454980',
+ 'title': '你是我的荣耀',
+ 'url': 'https://movie.douban.com/subject/33454980/'}
+2023-04-14 22:11:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1325127/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '26926445',
+ 'title': '长歌行',
+ 'url': 'https://movie.douban.com/subject/26926445/'}
+2023-04-14 22:11:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1325127/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '35348423',
+ 'title': '造相馆',
+ 'url': 'https://movie.douban.com/subject/35348423/'}
+2023-04-14 22:11:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1325127/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '27073044',
+ 'title': '幸福，触手可及！',
+ 'url': 'https://movie.douban.com/subject/27073044/'}
+2023-04-14 22:11:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1325127/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '26915522',
+ 'title': '三生三世枕上书',
+ 'url': 'https://movie.douban.com/subject/26915522/'}
+2023-04-14 22:11:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1325127/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '27088995',
+ 'title': '一千零一夜',
+ 'url': 'https://movie.douban.com/subject/27088995/'}
+2023-04-14 22:11:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1325127/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '26691361',
+ 'title': '21克拉',
+ 'url': 'https://movie.douban.com/subject/26691361/'}
+2023-04-14 22:11:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1325127/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '26703476',
+ 'title': '烈火如歌',
+ 'url': 'https://movie.douban.com/subject/26703476/'}
+2023-04-14 22:11:05 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1325127/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '26654146',
+ 'title': '解忧杂货店',
+ 'url': 'https://movie.douban.com/subject/26654146/'}
+2023-04-14 22:11:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://movie.douban.com/celebrity/1340022/movies?start=0&format=text&sortby=time&role=A1> (referer: None)
+2023-04-14 22:11:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1340022/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '35766491',
+ 'title': '满江红',
+ 'url': 'https://movie.douban.com/subject/35766491/'}
+2023-04-14 22:11:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1340022/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '36122241',
+ 'title': '湖南卫视2022-2023年跨年演唱会',
+ 'url': 'https://movie.douban.com/subject/36122241/'}
+2023-04-14 22:11:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1340022/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '35187381',
+ 'title': '世间有她',
+ 'url': 'https://movie.douban.com/subject/35187381/'}
+2023-04-14 22:11:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1340022/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '35613853',
+ 'title': '长津湖之水门桥',
+ 'url': 'https://movie.douban.com/subject/35613853/'}
+2023-04-14 22:11:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1340022/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '35312437',
+ 'title': '奇迹·笨小孩',
+ 'url': 'https://movie.douban.com/subject/35312437/'}
+2023-04-14 22:11:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1340022/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '35753130',
+ 'title': '新年快递',
+ 'url': 'https://movie.douban.com/subject/35753130/'}
+2023-04-14 22:11:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1340022/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '25845392',
+ 'title': '长津湖',
+ 'url': 'https://movie.douban.com/subject/25845392/'}
+2023-04-14 22:11:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1340022/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '35603036',
+ 'title': '湾区升明月——2021大湾区中秋电影音乐晚会',
+ 'url': 'https://movie.douban.com/subject/35603036/'}
+2023-04-14 22:11:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1340022/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '35087699',
+ 'title': '中国医生',
+ 'url': 'https://movie.douban.com/subject/35087699/'}
+2023-04-14 22:11:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1340022/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '35096844',
+ 'title': '送你一朵小红花',
+ 'url': 'https://movie.douban.com/subject/35096844/'}
+2023-04-14 22:11:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1340022/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '26673282',
+ 'title': '冷血狂宴',
+ 'url': 'https://movie.douban.com/subject/26673282/'}
+2023-04-14 22:11:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1340022/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '27145093',
+ 'title': '热血同行',
+ 'url': 'https://movie.douban.com/subject/27145093/'}
+2023-04-14 22:11:09 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1340022/movies?start=0&format=text&sortby=time&role=A1>
+{'id': '34906805',
+ 'title': '2019最美表演',
+ 'url': 'https://movie.douban.com/subject/34906805/'}
+2023-04-14 22:11:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://movie.douban.com/celebrity/1340022/movies?start=1&format=text&sortby=time&role=A1> (referer: None)
+2023-04-14 22:11:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1340022/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '35766491',
+ 'title': '满江红',
+ 'url': 'https://movie.douban.com/subject/35766491/'}
+2023-04-14 22:11:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1340022/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '36122241',
+ 'title': '湖南卫视2022-2023年跨年演唱会',
+ 'url': 'https://movie.douban.com/subject/36122241/'}
+2023-04-14 22:11:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1340022/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '35187381',
+ 'title': '世间有她',
+ 'url': 'https://movie.douban.com/subject/35187381/'}
+2023-04-14 22:11:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1340022/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '35613853',
+ 'title': '长津湖之水门桥',
+ 'url': 'https://movie.douban.com/subject/35613853/'}
+2023-04-14 22:11:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1340022/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '35312437',
+ 'title': '奇迹·笨小孩',
+ 'url': 'https://movie.douban.com/subject/35312437/'}
+2023-04-14 22:11:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1340022/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '35753130',
+ 'title': '新年快递',
+ 'url': 'https://movie.douban.com/subject/35753130/'}
+2023-04-14 22:11:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1340022/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '25845392',
+ 'title': '长津湖',
+ 'url': 'https://movie.douban.com/subject/25845392/'}
+2023-04-14 22:11:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1340022/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '35603036',
+ 'title': '湾区升明月——2021大湾区中秋电影音乐晚会',
+ 'url': 'https://movie.douban.com/subject/35603036/'}
+2023-04-14 22:11:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1340022/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '35087699',
+ 'title': '中国医生',
+ 'url': 'https://movie.douban.com/subject/35087699/'}
+2023-04-14 22:11:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1340022/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '35096844',
+ 'title': '送你一朵小红花',
+ 'url': 'https://movie.douban.com/subject/35096844/'}
+2023-04-14 22:11:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1340022/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '26673282',
+ 'title': '冷血狂宴',
+ 'url': 'https://movie.douban.com/subject/26673282/'}
+2023-04-14 22:11:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1340022/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '27145093',
+ 'title': '热血同行',
+ 'url': 'https://movie.douban.com/subject/27145093/'}
+2023-04-14 22:11:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1340022/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '34906805',
+ 'title': '2019最美表演',
+ 'url': 'https://movie.douban.com/subject/34906805/'}
+2023-04-14 22:11:13 [scrapy.core.scraper] DEBUG: Scraped from <200 https://movie.douban.com/celebrity/1340022/movies?start=1&format=text&sortby=time&role=A1>
+{'id': '30166972',
+ 'title': '少年的你',
+ 'url': 'https://movie.douban.com/subject/30166972/'}
+2023-04-14 22:11:13 [scrapy.core.engine] INFO: Closing spider (finished)
+2023-04-14 22:11:13 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 20760,
+ 'downloader/request_count': 20,
+ 'downloader/request_method_count/GET': 20,
+ 'downloader/response_bytes': 128462,
+ 'downloader/response_count': 20,
+ 'downloader/response_status_count/200': 20,
+ 'elapsed_time_seconds': 73.900911,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2023, 4, 14, 14, 11, 13, 778055),
+ 'httpcompression/response_bytes': 637511,
+ 'httpcompression/response_count': 20,
+ 'item_scraped_count': 214,
+ 'log_count/DEBUG': 237,
+ 'log_count/INFO': 12,
+ 'response_received_count': 20,
+ 'scheduler/dequeued': 20,
+ 'scheduler/dequeued/memory': 20,
+ 'scheduler/enqueued': 20,
+ 'scheduler/enqueued/memory': 20,
+ 'start_time': datetime.datetime(2023, 4, 14, 14, 9, 59, 877144)}
+2023-04-14 22:11:13 [scrapy.core.engine] INFO: Spider closed (finished)

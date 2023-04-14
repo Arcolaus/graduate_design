@@ -95,3 +95,19 @@ class ExportProxy:
         df.to_csv("proxy_list.csv",header=False,mode="a")
 
         return item
+
+class ExportCeleWorksList:
+    def __init__(self) -> None:
+        head=pd.DataFrame(columns=['title',"id",'url'])
+        head.to_csv('cele_works.csv')
+
+    def process_item(self,item,spider):
+
+        title=item.get("title","[title]")
+        url=item.get("url","[url]")
+        id=item.get("id","[id]")
+
+        df=pd.DataFrame([[title,id,url]])
+        df.to_csv("cele_works.csv",header=False,mode="a")
+
+        return item

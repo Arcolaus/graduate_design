@@ -7,8 +7,7 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-import datetime
-
+import time
 
 BOT_NAME = "scrapy_data"
 
@@ -16,10 +15,17 @@ SPIDER_MODULES = ["scrapy_data.spiders"]
 NEWSPIDER_MODULE = "scrapy_data.spiders"
 
 
-# LOG_LEVEL = 'DEBUG'
-# to_day = datetime.datetime.now()
-# log_file_path = 'log/scrapy_{}_{}_{}.log'.format(to_day.year, to_day.month, to_day.day)
-# LOG_FILE = log_file_path
+now_year=time.localtime().tm_year
+now_mon=time.localtime().tm_mon
+now_day=time.localtime().tm_mday
+now_hour=time.localtime().tm_hour
+now_min=time.localtime().tm_min
+now_sec=time.localtime().tm_sec
+
+
+LOG_LEVEL = 'DEBUG'
+log_file_path = 'log/{}{}{}_{}_{}_{}.log'.format(now_year,now_mon,now_day,now_hour,now_min,now_sec)
+LOG_FILE = log_file_path
 
 
 

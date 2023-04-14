@@ -20,7 +20,7 @@ class ProcessCommentSpider(scrapy.Spider):
 	}
 
     def start_requests(self):
-        fl=pd.read_csv("output.csv")
+        fl=pd.read_csv("movie_list.csv")
 
         for page in fl.itertuples():
             movie_url=getattr(page,"url")

@@ -7,8 +7,6 @@ import scrapy
 
 
 class Movie(scrapy.Item):
-	# define the fields for your item here like:
-	# name = scrapy.Field()
 	title=scrapy.Field()
 	url=scrapy.Field()
 	id=scrapy.Field()
@@ -32,3 +30,8 @@ class ProxyIP(scrapy.Item):
 	ip=scrapy.Field()
 	port=scrapy.Field()
 	proxy_url=scrapy.Field()
+
+class Celebrity(scrapy.Item):
+	name=scrapy.Field()
+	cel_id=scrapy.Field()
+	works_page_url=scrapy.Field()
