@@ -16,7 +16,7 @@ class CelebrityWorksSpider(scrapy.Spider):
 
     def start_requests(self):
         
-        df=pd.read_csv("celebrities_list.csv")
+        df=pd.read_csv("cele_list.csv")
 
         for page in df["url"]:
             for count in range(2):

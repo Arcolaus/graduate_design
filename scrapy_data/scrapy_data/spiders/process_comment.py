@@ -12,7 +12,8 @@ class ProcessCommentSpider(scrapy.Spider):
 
     custom_settings={
 		'ITEM_PIPELINES': {
-            "scrapy_data.pipelines.ExportComments": 500,
+            "scrapy_data.pipelines.ExportComments": None,        # 导出top250的所有短评
+            "scrapy_data.pipelines.ExportCeleComments": 500,    # 导出对照组所有短评
         },
         "DOWNLOADER_MIDDLEWARES":{
             "scrapy_data.middlewares.ScrapyDataDownloaderMiddleware": 300,
@@ -20,7 +21,8 @@ class ProcessCommentSpider(scrapy.Spider):
 	}
 
     def start_requests(self):
-        fl=pd.read_csv("movie_list.csv")
+        # fl=pd.read_csv("movie_list.csv") # 爬取top250的短评
+        fl=pd.read_csv("cele_works.csv") # 爬取对照组短评
 
         for page in fl.itertuples():
             movie_url=getattr(page,"url")
