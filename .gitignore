@@ -1,3 +1,3 @@
 .vscode/
-scrapy_data/_pycache/
-scrapy_data/scrapy_dataspiders/
+.scrapy_data/_pycache_/
+.scrapy_data/scrapy_data/spiders/_pycache_
