@@ -36,3 +36,14 @@ parse(response):
 2. 5分、4分、3分、2分、1分之间分歧点个数,评分分布总分歧值
 3. 特征ratio
 4. 朴素贝叶斯，贝叶斯统计加权分
+5. 一部影视作品的ratio值、短评内容长度、短评各个打分的数量，作为特征进行分类
+6. 短评的平均长度是否具有特征
+7. 短评分词，然后进行分类
+
+## pandas中`groupby`返回类型
+返回一个嵌套二维的元组，即
+```python
+group=df.groupby("column_name")
+for i in group: # i[0] 表示分组标识，i[1]标识这个分组下的所有Dataframe
+    pass
+```
