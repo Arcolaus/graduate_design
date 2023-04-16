@@ -97,6 +97,9 @@ class ExportCeleWorksList:
         pass
 
     def process_item(self,item,spider):
+        
+        # if item == None:
+        #     return None
 
         title=item.get("title","[title]")
         url=item.get("url","[url]")
@@ -106,20 +109,25 @@ class ExportCeleWorksList:
 
         df.to_csv("cele_works.csv",header=False,mode="a")
 
-        print("comments: {}".format(title))
-
         return item
     
 class ExportCeleWorksDetail:
     def __init__(self) -> None:
         head = pd.DataFrame(columns=['title', "rating","score_num", "comment_num",'ratio','id'])
-        head.to_csv('cele_works_detail.csv')
+        head.to_csv('tmp_cele_works_detail.csv')
         pass
 
     def open_spider(self, spider):
         pass
 
+    def close_spider(self,spider):
+        df=pd.read_csv("tmp_cele_works_detail.csv")
+        df.drop(df.columns[0],axis=1,inplace=True)
+        df.to_csv("cele_detail.csv",columns=['title', "rating","score_num", "comment_num",'ratio','id'])
+        
+
     def process_item(self, item, spider):
+
         title = item.get("title", "[title]")
         rating=item.get("rating","")
         score_num=item.get("score_num","")
@@ -143,6 +151,12 @@ class ExportCeleComments:
         head=pd.DataFrame(columns=["id","title","score","stars","content"])
         head.to_csv("cele_comments.csv")
         pass
+
+    def close_spider(self,spider):
+        df=pd.read_csv("cele_comments.csv",on_bad_lines="skip")
+        df.drop(df[df['score']=="[NULL]"].index,inplace=True)
+        df.drop(df.columns[0],axis=1,inplace=True)
+        df.to_csv("cele_comments.csv",columns=["id","title","score","stars","content"])
 
     def process_item(self,item,spider):
 

@@ -16,7 +16,6 @@ class ProcessUrlDetailSpider(scrapy.Spider):
 
 	def start_requests(self):
 		self.movie_list=pd.read_csv('movie_list.csv') # top250
-		# self.movie_list=pd.read_csv('cele_works.csv') # 对照
 
 		for page in self.movie_list.itertuples():
 
