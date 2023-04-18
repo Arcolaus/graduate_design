@@ -44,6 +44,6 @@ parse(response):
 返回一个嵌套二维的元组，即
 ```python
 group=df.groupby("column_name")
-for i in group: # i[0] 表示分组标识，i[1]标识这个分组下的所有Dataframe
+for i in group: # i[0] 表示分组标识，i[1]标识这个分组下的所有记录组成的Dataframe
     pass
 ```
