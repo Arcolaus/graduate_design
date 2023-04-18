@@ -35,3 +35,10 @@ class Celebrity(scrapy.Item):
 	name=scrapy.Field()
 	cel_id=scrapy.Field()
 	works_page_url=scrapy.Field()
+
+class MLWorkDetail(scrapy.Item):
+	title=scrapy.Field()
+	work_id=scrapy.Field()
+	score_num=scrapy.Field()
+	watched_num=scrapy.Field()
+	comment_num=scrapy.Field()

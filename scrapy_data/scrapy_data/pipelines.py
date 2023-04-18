@@ -177,3 +177,31 @@ class ExportCeleComments:
         print("title: {}".format(title))
 
         return item 
+
+class ExportMLWorkDetail:
+    def __init__(self) -> None:
+        pass
+
+    def open_spider(self,spider):
+        head=pd.DataFrame(columns=["title","work_id","score_num","watched_num","comment_num","ratio"])
+        head.to_csv("tmp_ml_work_detail.csv")
+    
+    def close_spider(self,spider):
+        df=pd.read_csv("tmp_ml_work_detail.csv")
+        df.drop(df.columns[0],axis=1,inplace=True)
+        df.to_csv("ml_work_detail.csv")
+
+    def process_item(self,item,spider):
+        title=item.get("title","[title]")
+        work_id=item.get("work_id","[work_id]")
+        score_num=item.get("score_num","[score_num]")
+        comment_num=item.get("comment_num","[comment_num]")
+        watched_num=item.get("watched_num","[watched_num]")
+
+        comment_num=comment_num[2:-2]
+        ratio=float(comment_num)/float(score_num)
+
+        df=pd.DataFrame([[title,work_id,score_num,watched_num,comment_num,ratio]])
+        df.to_csv("tmp_ml_work_detail.csv",header=False,mode="a")
+
+        return item
