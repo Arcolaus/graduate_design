@@ -228,5 +228,8 @@ class ExportRatingRatio:
         ratio_3s=item.get("ratio_3s","[]")
         ratio_2s=item.get("ratio_2s","[]")
         ratio_1s=item.get("ratio_1s","[]")
+        
+        df=pd.DataFrame([[title,work_id,score_num,ratio_5s,ratio_4s,ratio_3s,ratio_2s,ratio_1s]])
+        df.to_csv("rating_ratio.csv",header=False,mode="a")
 
         return item
