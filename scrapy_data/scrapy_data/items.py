@@ -42,3 +42,13 @@ class MLWorkDetail(scrapy.Item):
 	score_num=scrapy.Field()
 	watched_num=scrapy.Field()
 	comment_num=scrapy.Field()
+
+class WorkRatio(scrapy.Item):
+	title=scrapy.Field()
+	work_id=scrapy.Field()
+	score_num=scrapy.Field()
+	ratio_5s=scrapy.Field()
+	ratio_4s=scrapy.Field()
+	ratio_3s=scrapy.Field()
+	ratio_2s=scrapy.Field()
+	ratio_1s=scrapy.Field()

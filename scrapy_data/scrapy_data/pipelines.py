@@ -189,7 +189,7 @@ class ExportMLWorkDetail:
     def close_spider(self,spider):
         df=pd.read_csv("tmp_ml_work_detail.csv")
         df.drop(df.columns[0],axis=1,inplace=True)
-        df.to_csv("ml_work_detail.csv")
+        df.to_csv("ml_work_detail.csv",index=False)
 
     def process_item(self,item,spider):
         title=item.get("title","[title]")
@@ -203,5 +203,30 @@ class ExportMLWorkDetail:
 
         df=pd.DataFrame([[title,work_id,score_num,watched_num,comment_num,ratio]])
         df.to_csv("tmp_ml_work_detail.csv",header=False,mode="a")
+
+        return item
+
+class ExportRatingRatio:
+    def __init__(self) -> None:
+        pass
+
+    def open_spider(self,spider):
+        head=pd.DataFrame(columns=["title","work_id","5star_ratio","4star_ratio","3star_ratio","2star_ratio","1star_ratio"])
+        head.to_csv("rating_ratio.csv")
+    
+    def close_spider(self,spider):
+        df=pd.read_csv("rating_ratio.csv")
+        df.drop(df.columns[0],axis=1,inplace=True)
+        df.to_csv("rating_ratio.csv",index=False)
+
+    def process_item(self,item,spider):
+        title=item.get("title","[]")
+        work_id=item.get("work_id","[]")
+        score_num=item.get("score_num","[]")
+        ratio_5s=item.get("ratio_5s","[]")
+        ratio_4s=item.get("ratio_4s","[]")
+        ratio_3s=item.get("ratio_3s","[]")
+        ratio_2s=item.get("ratio_2s","[]")
+        ratio_1s=item.get("ratio_1s","[]")
 
         return item
