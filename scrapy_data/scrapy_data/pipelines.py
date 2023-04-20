@@ -58,8 +58,8 @@ class ExportComments:
         pass
 
     def open_spider(self,spider):
-        head=pd.DataFrame(columns=["id","title","score","stars","content"])
-        head.to_csv("contents.csv")
+        # head=pd.DataFrame(columns=["id","title","score","stars","content"])
+        # head.to_csv("contents.csv",index=False)
         pass
 
     def process_item(self,item,spider):
@@ -76,7 +76,7 @@ class ExportComments:
             score="[NULL]"
 
         df=pd.DataFrame([[id,title,score,stars,content]])
-        df.to_csv("contents.csv",header=False,mode="a")
+        df.to_csv("contents.csv",header=False,mode="a",index=False)
 
         # print("content: {}".format(content))
 
